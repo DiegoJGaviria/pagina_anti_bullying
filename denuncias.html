@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apoyo Seguro - Denuncias</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <style>
+        /* Pequeños ajustes específicos para esta página */
+        .visibility-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .badge-public {
+            background: #2a9d8f;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        .badge-private {
+            background: #6c757d;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        .private-list {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        .toggle-private-btn {
+            margin-bottom: 1rem;
+        }
+
+        .reports-actions {
+            display: inline-flex;
+            gap: 0.5rem;
+            margin-left: 0.5rem;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="contacts" class="resources">
+        <div class="container">
+            <header class="header">
+                <div class="container">
+                    <div class="header-content">
+                        <div class="logo">
+                            <i class="fas fa-shield-heart"></i>
+                            <span>Apoyo Seguro</span>
+                        </div>
+                        <nav class="nav">
+                            <a href="index.html" class="nav-link">Inicio</a>
+                            <a href="index.html" class="nav-link">Recursos</a>
+                            <a href="#contactos" class="nav-link">Contactos</a>
+                            <a href="denuncias.html" class="nav-link">Denuncia</a>
+                        </nav>
+                        <button class="emergency-btn" onclick="showEmergencyModal()">
+                            <i class="fas fa-phone"></i>
+                            Emergencia
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <br />
+            <h2 class="section-title">Formulario de Denuncia</h2>
+            <h5 class="section-subtitle">Complete la siguiente información para reportar un incidente de acoso o
+                bullying en la universidad.
+                <br>Los datos personales son opcionales y se manejarán con confidencialidad según la Ley 1581 de 2012.
+                En caso de riesgo o emergencia, comuníquese de inmediato al 123 o con Bienestar Universitario.
+            </h5>
+
+            <form id="reportForm" class="report-form" onsubmit="event.preventDefault(); submitReport()">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="reportName">Tu nombre (opcional)</label>
+                        <input id="reportName" type="text" placeholder="Nombre" />
+                    </div>
+                    <div class="form-group">
+                        <label for="reportEmail">Correo (opcional)</label>
+                        <input id="reportEmail" type="email" placeholder="correo@ejemplo.com" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="reportDate">Fecha del incidente</label>
+                    <input id="reportDate" type="date" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="reportLocation">Lugar</label>
+                    <input id="reportLocation" type="text" placeholder="Universidad, en línea, etc." required />
+                </div>
+
+                <div class="form-group">
+                    <label for="reportDescription">Descripción del incidente</label>
+                    <textarea id="reportDescription" rows="6" placeholder="Describe lo que pasó" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="reportEvidence">Evidencia (opcional, imagen o captura)</label>
+                    <input id="reportEvidence" type="file" accept="image/*" />
+                </div>
+
+                <div class="form-group">
+                    <label>Visibilidad de la denuncia</label>
+                    <div class="visibility-group">
+                        <label><input type="radio" name="visibility" value="private" checked /> Privada <span
+                                class="badge-private">Privada</span></label>
+                        <label><input type="radio" name="visibility" value="public" /> Pública <span
+                                class="badge-public">Pública</span></label>
+                        <small style="margin-left:1rem; color:var(--text-secondary);">Las denuncias públicas podrán ser
+                            visibles en la sección de Denuncias Públicas.</small>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button class="btn btn-primary" type="submit">Enviar Denuncia</button>
+                    <button class="btn btn-outline" type="button" onclick="downloadReports('all')">Descargar
+                        Denuncias</button>
+                </div>
+            </form>
+
+            <div id="savedReports" class="saved-reports">
+                <h3>Denuncias Públicas</h3>
+                <ul id="reportsListPublic"></ul>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

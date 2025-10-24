@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoyo Seguro - Ayuda contra el Bullying</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-shield-heart"></i>
+                    <span>Apoyo Seguro</span>
+                </div>
+                <nav class="nav">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#recursos" class="nav-link">Recursos</a>
+                    <a href="#contactos" class="nav-link">Contactos</a>
+                    <a href="denuncias.html" class="nav-link">Denuncia</a>
+                    <a href="#ayuda" class="nav-link"></a>
+                </nav>
+                <button class="emergency-btn" onclick="showEmergencyModal()">
+                    <i class="fas fa-phone"></i>
+                    Emergencia
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">No estás solo/a</h1>
+                <p class="hero-subtitle">
+                    Encuentra apoyo, recursos y orientación para enfrentar el bullying.
+                    Estamos aquí para ayudarte en cada paso del camino.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" onclick="openChat()">
+                        <i class="fas fa-comments"></i>
+                        Hablar con Asistente
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('recursos')">
+                        <i class="fas fa-book"></i>
+                        Ver Recursos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions -->
+    <section class="quick-actions">
+        <div class="container">
+            <h2 class="section-title">¿Qué puedes hacer ahora?</h2>
+            <div class="actions-grid">
+                <div class="action-card" onclick="showActionInfo('documentar')">
+                    <div class="action-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>Documenta</h3>
+                    <p>Guarda evidencias del bullying</p>
+                </div>
+                <div class="action-card" onclick="showActionInfo('hablar')">
+                    <div class="action-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Habla</h3>
+                    <p>Comunícate con alguien de confianza</p>
+                </div>
+                <div class="action-card" onclick="showActionInfo('reportar')">
+                    <div class="action-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3>Reporta</h3>
+                    <p>Informa a las autoridades</p>
+                </div>
+                <div class="action-card" onclick="showActionInfo('proteger')">
+                    <div class="action-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Protégete</h3>
+                    <p>Mantente seguro/a</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="recursos" class="resources">
+        <div class="container">
+            <h2 class="section-title">Recursos de Apoyo</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Guías Educativas</h3>
+                    <p>Aprende sobre el bullying y cómo enfrentarlo</p>
+                    <button class="btn btn-outline" onclick="showResource('guias')">Ver Guías</button>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Apoyo Emocional</h3>
+                    <p>Técnicas para cuidar tu bienestar mental</p>
+                    <button class="btn btn-outline" onclick="showResource('apoyo')">Ver Recursos</button>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>Derechos Legales</h3>
+                    <p>Conoce tus derechos y opciones legales</p>
+                    <button class="btn btn-outline" onclick="showResource('legal')">Ver Información</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Contacts -->
+    <section id="contactos" class="contacts">
+        <div class="container">
+            <h2 class="section-title">Contactos de Emergencia</h2>
+            <div class="contacts-grid">
+                <div class="contact-card urgent">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Línea de Crisis</h3>
+                    <p class="contact-number">911</p>
+                    <p>Emergencias inmediatas</p>
+                    <button class="btn btn-danger" onclick="callNumber('911')">Llamar Ahora</button>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Línea de Apoyo</h3>
+                    <p class="contact-number">800-123-4567</p>
+                    <p>Consejería y apoyo emocional</p>
+                    <button class="btn btn-primary" onclick="callNumber('8001234567')">Llamar</button>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3>Autoridades Escolares</h3>
+                    <p class="contact-number">800-EDU-HELP</p>
+                    <p>Reportar bullying escolar</p>
+                    <button class="btn btn-primary" onclick="callNumber('8003384357')">Llamar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Denuncia Section -->
+
+
+    <!-- Chat Assistant -->
+    <div id="chatContainer" class="chat-container" aria-hidden="true">
+        <div class="chat-header">
+            <div class="chat-title">
+                <i class="fas fa-robot"></i>
+                Asistente de Apoyo
+            </div>
+            <button class="chat-close" onclick="closeChat()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message assistant">
+                <div class="message-content">
+                    Hola, soy tu asistente de apoyo. Pregúntame cualquier cosa sobre el bullying o escribe cómo te
+                    sientes.
+                </div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="messageInput" placeholder="Escribe tu mensaje..." onkeypress="handleKeyPress(event)"
+                autocomplete="off">
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chat Toggle Button -->
+    <button class="chat-toggle" onclick="toggleChat()" aria-label="Abrir chat">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Modals -->
+    <div id="emergencyModal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Contactos de Emergencia</h3>
+                <button class="modal-close" onclick="closeModal('emergencyModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="emergency-contacts">
+                    <div class="emergency-contact">
+                        <strong>Emergencias Inmediatas:</strong>
+                        <a href="tel:911" class="emergency-link">911</a>
+                    </div>
+                    <div class="emergency-contact">
+                        <strong>Línea de Crisis Nacional:</strong>
+                        <a href="tel:8001234567" class="emergency-link">800-123-4567</a>
+                    </div>
+                    <div class="emergency-contact">
+                        <strong>Chat de Crisis:</strong>
+                        <a href="#" class="emergency-link">crisis-chat.org</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="actionModal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="actionModalTitle">Información</h3>
+                <button class="modal-close" onclick="closeModal('actionModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="actionModalContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="resourceModal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="resourceModalTitle">Recurso</h3>
+                <button class="modal-close" onclick="closeModal('resourceModal')">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id="resourceModalContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Apoyo Seguro</h4>
+                    <p>Brindando apoyo y recursos para enfrentar el bullying</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Útiles</h4>
+                    <ul>
+                        <li><a href="#recursos">Recursos</a></li>
+                        <li><a href="#contactos">Contactos</a></li>
+                        <li><a href="denuncias.html">Denuncia</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Emergencia</h4>
+                    <p>Si estás en peligro inmediato, llama al <strong>911</strong></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Apoyo Seguro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
