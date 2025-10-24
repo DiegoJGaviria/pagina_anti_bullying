@@ -319,8 +319,11 @@ function showActionInfo(action) {
     documentar: {
       title: "Cómo Documentar el Bullying",
       content: `
-                <h4>Pasos para documentar:</h4>
-                <ul>
+      
+                <h2>Pasos para documentar:</h2>
+                <br/>
+                <div class="action-card1">
+                  <ul>
                     <li><strong>Fecha y hora:</strong> Anota cuándo ocurrió cada incidente</li>
                     <li><strong>Lugar:</strong> Dónde sucedió (aula, patio, en línea, etc.)</li>
                     <li><strong>Personas involucradas:</strong> Nombres de agresores y testigos</li>
@@ -329,12 +332,15 @@ function showActionInfo(action) {
                     <li><strong>Impacto:</strong> Cómo te afectó física y emocionalmente</li>
                 </ul>
                 <p><strong>Importante:</strong> Guarda toda la información en un lugar seguro.</p>
+                </div>
             `,
     },
     hablar: {
       title: "Con Quién Hablar",
-      content: `
-                <h4>Personas de confianza:</h4>
+      content: ` 
+                <h2>Personas de confianza:</h2>
+                <br/>
+                <div class="action-card1">
                 <ul>
                     <li><strong>Familia:</strong> Padres, hermanos mayores, tíos, abuelos</li>
                     <li><strong>Escuela:</strong> Maestros, consejeros, directores</li>
@@ -343,12 +349,14 @@ function showActionInfo(action) {
                     <li><strong>Líneas de apoyo:</strong> Consejeros especializados</li>
                 </ul>
                 <p><strong>Recuerda:</strong> No tienes que enfrentar esto solo/a.</p>
-            `,
+            </div>`,
     },
     reportar: {
       title: "Cómo Reportar el Bullying",
       content: `
-                <h4>Pasos para reportar:</h4>
+                <h2>Pasos para reportar:</h2>
+                <br/>
+                <div class="action-card1">
                 <ol>
                     <li><strong>Escuela:</strong> Habla con un maestro o consejero</li>
                     <li><strong>Administración:</strong> Si no hay respuesta, contacta al director</li>
@@ -357,12 +365,16 @@ function showActionInfo(action) {
                     <li><strong>Líneas especializadas:</strong> Llama a números de apoyo</li>
                 </ol>
                 <p><strong>Importante:</strong> Mantén copias de todos los reportes.</p>
-            `,
+            </div>`,
     },
     proteger: {
+    
       title: "Cómo Protegerte",
       content: `
-                <h4>Estrategias de protección:</h4>
+                <h2>Estrategias de protección:</h2>
+                
+                <br/>
+                <div class="action-card1">
                 <ul>
                     <li><strong>Evita estar solo/a:</strong> Mantente cerca de amigos o adultos</li>
                     <li><strong>Rutas seguras:</strong> Usa caminos donde haya supervisión</li>
@@ -372,7 +384,7 @@ function showActionInfo(action) {
                     <li><strong>Tecnología:</strong> Bloquea y reporta en redes sociales</li>
                 </ul>
                 <p><strong>Recuerda:</strong> Tu seguridad es lo más importante.</p>
-            `,
+            </div>`,
     },
   }
 
@@ -394,13 +406,19 @@ function showResource(resource) {
     guias: {
       title: "Guías Educativas",
       content: `
-                <h4>Recursos educativos disponibles:</h4>
+                <h2>Recursos educativos disponibles:</h2>
+                <div class="action-card1">
                 <div style="margin: 1rem 0;">
-                    <h5>¿Qué es el bullying?</h5>
-                    <p>El bullying es un comportamiento agresivo repetitivo con desequilibrio de poder.</p>
+                    <h3>¿Qué es el bullying?</h3>
+                    <br/>
+                    <ul>
+                    <li>El bullying es un comportamiento agresivo repetitivo con desequilibrio de poder.</li>
+                    </p>
+                    
                 </div>
                 <div style="margin: 1rem 0;">
-                    <h5>Tipos de bullying:</h5>
+                    <h3>Tipos de bullying:</h3>
+                    <br/>
                     <ul>
                         <li>Físico: golpes, empujones</li>
                         <li>Verbal: insultos, amenazas</li>
@@ -408,6 +426,7 @@ function showResource(resource) {
                         <li>Ciberbullying: acoso en línea</li>
                     </ul>
                 </div>
+                    </div>
             `,
     },
     apoyo: {
@@ -415,13 +434,16 @@ function showResource(resource) {
       content: `
                 <h4>Cuidando tu bienestar mental:</h4>
                 <div style="margin: 1rem 0;">
-                    <h5>Técnicas de relajación:</h5>
+                <div class="action-card1">
+                    <h3>Técnicas de relajación:</h3>
+                    <br/>
                     <ul>
                         <li>Respiración profunda</li>
                         <li>Meditación mindfulness</li>
                         <li>Ejercicio regular</li>
                         <li>Actividades que disfrutes</li>
                     </ul>
+                </div>
                 </div>
             `,
     },
@@ -430,8 +452,19 @@ function showResource(resource) {
       content: `
                 <h4>Tus derechos legales:</h4>
                 <div style="margin: 1rem 0;">
-                    <h5>Derecho a un ambiente seguro:</h5>
-                    <p>Tienes derecho a estar seguro/a en la escuela y en línea.</p>
+                <div class="action-card1">
+                    <h3>Derecho a un ambiente seguro:</h3>
+                    <br/>
+                    <ul>
+                    <li>Tienes derecho a estar seguro/a en la escuela y en línea.</li>
+                    <li>Derecho a la protección inmediata de tu integridad física y emocional</li>
+                    <li>Derecho a la confidencialidad en el manejo de tu caso</li>
+                    <li>Derecho a recibir atención psicológica y acompañamiento profesional</li>
+                    <li>Derecho a que se tomen medidas preventivas inmediatas</li>
+                    <li>Derecho a ser informado sobre el proceso y las acciones tomadas</li>
+                    <li>Derecho a la no revictimización durante el proceso</li>
+                    </ul>
+                </div>
                 </div>
             `,
     },
@@ -549,7 +582,7 @@ function renderReportsList() {
   }
   reports.slice().reverse().forEach((r) => {
     const li = document.createElement("li")
-    li.innerHTML = `<strong>${escapeHtml(r.date)}</strong> — ${escapeHtml(r.description.slice(0, 80))}${r.description.length>80?"...":""} <button class="btn btn-outline" onclick="downloadReport('${r.id}')">Descargar</button> <button class="btn btn-secondary" onclick="deleteReport('${r.id}')">Eliminar</button>`
+    li.innerHTML = `<strong>${escapeHtml(r.date)}</strong> — ${escapeHtml(r.description.slice(0, 80))}${r.description.length > 80 ? "..." : ""} <button class="btn btn-outline" onclick="downloadReport('${r.id}')">Descargar</button> <button class="btn btn-secondary" onclick="deleteReport('${r.id}')">Eliminar</button>`
     list.appendChild(li)
   })
 }
@@ -674,7 +707,7 @@ function renderPublicReports() {
   }
   reports.slice().reverse().forEach((r) => {
     const li = document.createElement("li")
-    li.innerHTML = `<strong>${escapeHtml(r.date)}</strong> — ${escapeHtml(r.description.slice(0, 120))}${r.description.length>120?"...":""}
+    li.innerHTML = `<strong>${escapeHtml(r.date)}</strong> — ${escapeHtml(r.description.slice(0, 120))}${r.description.length > 120 ? "..." : ""}
       <span class="reports-actions">
         <button class="btn btn-outline" onclick="downloadReport('${r.id}','public')"><i class="fas fa-download"></i></button>
         <button class="btn btn-danger" onclick="deleteReport('${r.id}','public')"><i class="fas fa-trash"></i></button>
@@ -695,7 +728,7 @@ function renderPrivateReports() {
   }
   reports.slice().reverse().forEach((r) => {
     const li = document.createElement("li")
-    li.innerHTML = `<strong>${escapeHtml(r.date)}</strong> — ${escapeHtml(r.description.slice(0,120))}${r.description.length>120?"...":""}
+    li.innerHTML = `<strong>${escapeHtml(r.date)}</strong> — ${escapeHtml(r.description.slice(0, 120))}${r.description.length > 120 ? "..." : ""}
       <span class="reports-actions">
         <button class="btn btn-outline" onclick="downloadReport('${r.id}','private')"><i class="fas fa-download"></i></button>
         <button class="btn btn-secondary" onclick="makePublic('${r.id}')">Hacer pública</button>
@@ -798,17 +831,17 @@ document.addEventListener("DOMContentLoaded", () => {
   renderReports()
 },
 
-{
-  "name": "bullying-support-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "start": "node server.js"
-  },
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "node-fetch": "^2.6.7"
+  {
+    "name": "bullying-support-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "node-fetch": "^2.6.7"
+    }
   }
-}
 )

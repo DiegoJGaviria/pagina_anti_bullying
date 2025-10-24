@@ -205,7 +205,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
-
 .action-card {
   background: var(--background-color);
   padding: 2rem;
@@ -216,6 +215,33 @@ body {
   border: 2px solid transparent;
 }
 
+.action-card1 {
+  background: var(--background-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: left;
+  cursor: default;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+.action-card2 {
+  background: var(--background-color);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: left;
+  cursor: default;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+.action-card3 {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  text-align: left;
+  cursor: default;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
 .action-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow);
