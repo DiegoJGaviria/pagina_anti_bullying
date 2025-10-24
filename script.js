@@ -232,7 +232,7 @@ const knowledgeBase = [
     id: "legal",
     keywords: ["legal", "derechos", "ley", "abogado"],
     answer:
-      "Tienes derecho a un ambiente seguro. Las escuelas suelen tener políticas anti-bullying; documenta todo y consulta la normativa local o busca asesoría legal si es necesario.",
+      "Tienes derecho a un ambiente seguro. Las universidades suelen tener políticas anti-bullying; documenta todo y consulta la normativa local o busca asesoría legal si es necesario.",
   },
   {
     id: "como ayudar a un amigo",
@@ -343,7 +343,7 @@ function showActionInfo(action) {
                 <div class="action-card1">
                 <ul>
                     <li><strong>Familia:</strong> Padres, hermanos mayores, tíos, abuelos</li>
-                    <li><strong>Escuela:</strong> Maestros, consejeros, directores</li>
+                    <li><strong>Universidad:</strong> Maestros, consejeros, directores</li>
                     <li><strong>Amigos:</strong> Amigos cercanos y sus familias</li>
                     <li><strong>Profesionales:</strong> Psicólogos, trabajadores sociales</li>
                     <li><strong>Líneas de apoyo:</strong> Consejeros especializados</li>
@@ -358,7 +358,7 @@ function showActionInfo(action) {
                 <br/>
                 <div class="action-card1">
                 <ol>
-                    <li><strong>Escuela:</strong> Habla con un maestro o consejero</li>
+                    <li><strong>Universidad:</strong> Habla con un maestro o consejero</li>
                     <li><strong>Administración:</strong> Si no hay respuesta, contacta al director</li>
                     <li><strong>Distrito escolar:</strong> Escala al nivel superior si es necesario</li>
                     <li><strong>Autoridades:</strong> En casos graves, contacta a la policía</li>
@@ -456,7 +456,7 @@ function showResource(resource) {
                     <h3>Derecho a un ambiente seguro:</h3>
                     <br/>
                     <ul>
-                    <li>Tienes derecho a estar seguro/a en la escuela y en línea.</li>
+                    <li>Tienes derecho a estar seguro/a en la universidad y en línea.</li>
                     <li>Derecho a la protección inmediata de tu integridad física y emocional</li>
                     <li>Derecho a la confidencialidad en el manejo de tu caso</li>
                     <li>Derecho a recibir atención psicológica y acompañamiento profesional</li>
